@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+</head>
+<body>
+    <header id="home">
+            <nav>
+                <div id="Logo">
+                <a href="#home"><img src="images/logo.svg" alt="logo"><h1>Cronus</h1></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="home">home</a>
+                            <a href="about">about</a>
+                            <a href="Product">Product</a>
+                            <a href="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+    <div class="main">
+        <div class="container">
+            <h1>POPUP LOGIN</h1>
+            <button href="" class="button" id="popup-btn" onclick="togglePopup('popup')">login</button>
+            <button href="" class="button" id="reg-btn" onclick="togglePopup('reg-popup')">cadastro</button>
+            <button href="" class="button" id="hist-btn" onclick="handleHistory()">historico</button>
+        </div>
+        <!--login-->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <img src="images/user.png" alt="user" id="user">
+                <img src="images/close.png" alt="close" id="close" onclick="togglePopup('popup')">
+                <form action="">
+                    <input type="text" placeholder="username" id="username_login">
+                    <input type="password" placeholder="password" id="senha_login">
+                    <p id="show_cpf"></p>
+                    <button class="inside-bt" onclick="login()" type="button">login</button>
+                </form>
+            </div>
+        </div>
+        <div class="reg-popup" id="reg-popup">
+            <div class="reg-popup-content">
+                <img src="images/user.png" alt="user" id="user">
+                <img src="images/close.png" alt="close" id="reg-close" onclick="togglePopup('reg-popup')">
+                <form id="reg_form" action="">
+                    <input type="text" placeholder="username" id="username_register">
+                    <input type="password" placeholder="password" id="senha_register">
+                    <input type="text" placeholder="cpf" id="cpf_register">
+                    <button type="button" class="inside-bt" onclick="register()">Register</button>
+                </form>
+        </div>
+        </div>
+        <div class="hist-popup" id="hist-popup">
+            <div class="hist-popup-content">
+                <img src="images/user.png" alt="user" id="user">
+                <img src="images/close.png" alt="close" id="hist-close" onclick="togglePopup('hist-popup')">
+                <table id="history">
+                    <tr>
+                        <th>CPF</th>
+                        <th>Autor</th>
+                        <th>Acesso</th>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>a</td>
+                        <td>a</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
